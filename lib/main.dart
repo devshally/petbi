@@ -1,44 +1,22 @@
-import 'package:flutter/foundation.dart';
+import 'dart:async';
 
-import 'app_start.dart';
-import 'utilities/core/abstractions/build_config.dart';
+import 'package:flutter/material.dart';
+import 'package:petbi/src/core/app_initializer.dart';
+import 'package:petbi/src/core/application.dart';
 
 void main() {
-  if (kReleaseMode) {
-    ProductionApp().startApp();
-  } else {
-    StagingApp().startApp();
-  }
-}
+  WidgetsFlutterBinding.ensureInitialized();
 
-class ProductionApp extends AppStart {
-  ProductionApp()
-      : super(ProductionBuildConfig(
-          baseUrl: 'https://development.petbi.com/api/devshally',
-          appName: "Petbi",
-        ));
-}
+  final AppInitializer appInitializer = AppInitializer();
 
-class ProductionBuildConfig extends BuildConfig {
-  ProductionBuildConfig({required String baseUrl, required String appName})
-      : super(
-          baseUrl: baseUrl,
-          appName: appName,
-        );
-}
+  runZonedGuarded(
+    () async {
+      await appInitializer.preAppRun();
 
-class StagingApp extends AppStart {
-  StagingApp()
-      : super(StagingBuildConfig(
-          baseUrl: 'https://development.petbi.com/api/devshally',
-          appName: "Petbi Staging",
-        ));
-}
+      runApp(const Application());
 
-class StagingBuildConfig extends BuildConfig {
-  StagingBuildConfig({required String baseUrl, required String appName})
-      : super(
-          baseUrl: baseUrl,
-          appName: appName,
-        );
+      await appInitializer.postAppRun();
+    },
+    (error, stack) {},
+  );
 }
