@@ -17,9 +17,9 @@ class AppColors {
         onBackground = const Color(0xFF000000),
         surface = const Color(0xFFFBFAF5),
         onSurface = const Color(0xFF000000),
-        secondary = const Color(0xFFC4C4C4),
+        secondary = const Color(0xFFF10E60),
         onSecondary = const Color(0xFF000000),
-        primary = const Color(0xff3D5AFE),
+        primary = const Color(0xff0081C9),
         onPrimary = const Color(0xFFFBFAF5),
         error = const Color(0xFFFF1744),
         onError = const Color(0xFFFBFAF5);
