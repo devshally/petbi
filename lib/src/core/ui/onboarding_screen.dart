@@ -1,7 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:petbi/src/core/resources/constants/image_constants.dart';
 import 'package:petbi/src/core/resources/widgets/my_button.dart';
 import 'package:petbi/src/core/resources/widgets/size.dart';
@@ -20,27 +19,27 @@ class OnboardingScreen extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              SvgPicture.asset(AppImages.onboardingImage1),
-              SvgPicture.asset(AppImages.onboardingImage2),
-              SvgPicture.asset(AppImages.onboardingImage3),
+              Image.asset(AppImages.onboardingImage1, height: 90.h),
+              Image.asset(AppImages.onboardingImage2, height: 40.h),
+              Image.asset(AppImages.onboardingImage3, height: 90.h),
             ],
           ),
           S.h(12.h),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              SvgPicture.asset(AppImages.splashImage),
+              Image.asset(AppImages.splashImage, height: 150.h),
               SizedBox(width: 35.w),
-              SvgPicture.asset(AppImages.onboardingImage4),
+              Image.asset(AppImages.onboardingImage4, height: 40.h),
             ],
           ),
           S.h(16.h),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              SvgPicture.asset(AppImages.onboardingImage5),
-              SvgPicture.asset(AppImages.onboardingImage6),
-              SvgPicture.asset(AppImages.onboardingImage7),
+              Image.asset(AppImages.onboardingImage5, height: 130.h),
+              Image.asset(AppImages.onboardingImage6, height: 40.h),
+              Image.asset(AppImages.onboardingImage7, height: 130.h),
             ],
           ),
           S.h(93.h),

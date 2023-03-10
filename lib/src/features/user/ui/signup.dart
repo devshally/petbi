@@ -13,7 +13,7 @@ class SignupScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              S.h(40.h),
+              S.h(20.h),
               TextView(
                 text: 'Create your PetBi Account',
                 fontSize: 24.sp,

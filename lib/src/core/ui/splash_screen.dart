@@ -1,9 +1,5 @@
-import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:petbi/src/core/resources/constants/image_constants.dart';
-import 'package:petbi/src/core/routing/app_router.dart';
+import 'package:petbi/src/core/resources/resources.dart';
 import 'package:petbi/src/core/theme/app_colors.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -22,7 +18,7 @@ class _SplashScreenState extends State<SplashScreen> {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          SvgPicture.asset(AppImages.splashImage),
+          Image.asset(AppImages.splashImage, height: 150.h, width: 150.w),
           SizedBox(height: 4.h),
           Text.rich(
             TextSpan(
@@ -57,8 +53,8 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 
   handleRouting() {
-    Future.delayed(const Duration(seconds: 3)).then(
-      (value) => context.router.push(
+    Future.delayed(const Duration(seconds: 5)).then(
+      (value) => context.router.replace(
         const OnboardingRoute(),
       ),
     );

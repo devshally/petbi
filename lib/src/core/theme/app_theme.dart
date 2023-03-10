@@ -14,7 +14,6 @@ class AppTheme {
       textTheme: _buildTextTheme(colors: colors),
       appBarTheme: AppBarTheme(
         elevation: 0,
-        toolbarHeight: 0,
         systemOverlayStyle: SystemUiOverlayStyle(
           statusBarColor: Colors.transparent,
           statusBarIconBrightness: brightness == Brightness.light
@@ -22,6 +21,8 @@ class AppTheme {
               : Brightness.light,
         ),
         backgroundColor: Colors.transparent,
+        titleSpacing: 0,
+        centerTitle: false,
       ),
       drawerTheme: DrawerThemeData(backgroundColor: colors.background),
       cardColor: colors.background,

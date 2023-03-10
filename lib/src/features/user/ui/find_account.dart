@@ -8,14 +8,8 @@ class FindAccountScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: IconButton(
-          onPressed: () {},
-          icon: const Icon(
-            Icons.arrow_back_outlined,
-            color: Colors.black,
-            size: 15,
-          ),
-        ),
+        leading: const CustomBackButton(),
+        leadingWidth: 45,
         title: TextView(
           color: Colors.black,
           text: 'Find your Account',

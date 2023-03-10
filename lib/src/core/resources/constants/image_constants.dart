@@ -1,13 +1,22 @@
 class AppImages {
   // Splash and Onboarding.
-  static const splashImage = 'assets/images/splash_image.svg';
-  static const onboardingImage1 = 'assets/images/onboarding_image1.svg';
-  static const onboardingImage2 = 'assets/images/onboarding_image2.svg';
-  static const onboardingImage3 = 'assets/images/onboarding_image3.svg';
-  static const onboardingImage4 = 'assets/images/onboarding_image4.svg';
-  static const onboardingImage5 = 'assets/images/onboarding_image5.svg';
-  static const onboardingImage6 = 'assets/images/onboarding_image6.svg';
-  static const onboardingImage7 = 'assets/images/onboarding_image7.svg';
+  // static const splashImage = 'assets/images/splash_image.svg-min';
+  // static const onboardingImage1 = 'assets/images/onboarding_image1-min.svg';
+  // static const onboardingImage2 = 'assets/images/onboarding_image2-min.svg';
+  // static const onboardingImage3 = 'assets/images/onboarding_image3-min.svg';
+  // static const onboardingImage4 = 'assets/images/onboarding_image4-min.svg';
+  // static const onboardingImage5 = 'assets/images/onboarding_image5-min.svg';
+  // static const onboardingImage6 = 'assets/images/onboarding_image6-min.svg';
+  // static const onboardingImage7 = 'assets/images/onboarding_image7-min.svg';
+
+  static const splashImage = 'assets/images/dog.png';
+  static const onboardingImage1 = 'assets/images/onboarding_image1.png';
+  static const onboardingImage2 = 'assets/images/onboarding_image2.png';
+  static const onboardingImage3 = 'assets/images/onboarding_image3.png';
+  static const onboardingImage4 = 'assets/images/onboarding_image4.png';
+  static const onboardingImage5 = 'assets/images/onboarding_image5.png';
+  static const onboardingImage6 = 'assets/images/onboarding_image6.png';
+  static const onboardingImage7 = 'assets/images/onboarding_image7.png';
 
   // Bottom navigation.
   static const homeIcon = 'assets/icons/home.svg';
@@ -23,10 +32,10 @@ class AppImages {
   static const backIcon = 'assets/icons/arrowleft.svg';
 
   // Animal icons.
-  static const dogIcon = 'assets/icons/dog-face.svg';
-  static const catIcon = 'assets/icons/cat-face.svg';
-  static const rabbitIcon = 'assets/icons/rabbit-face.svg';
-  static const birdIcon = 'assets/icons/bird-face.svg';
-  static const parrotIcon = 'assets/icons/parrot-face.svg';
-  static const monkeyIcon = 'assets/icons/monkey-face.svg';
+  static const dogIcon = 'assets/images/dog-face-min.svg';
+  static const catIcon = 'assets/images/cat-face-min.svg';
+  static const rabbitIcon = 'assets/images/rabbit-face-min.svg';
+  static const birdIcon = 'assets/images/bird-face-min.svg';
+  static const parrotIcon = 'assets/images/parrot-face-min.svg';
+  static const monkeyIcon = 'assets/images/monkey-face-min.svg';
 }
