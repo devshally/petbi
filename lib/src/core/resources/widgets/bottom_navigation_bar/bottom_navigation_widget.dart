@@ -16,20 +16,15 @@ class _BottomNavigationWidgetState extends State<BottomNavigationWidget> {
     final state = context.watch<BottomNavigationCubit>();
 
     return Container(
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         color: Colors.white,
-        boxShadow: [
-          BoxShadow(
-            blurRadius: 10.5,
-            spreadRadius: 10,
-            color: Colors.black.withOpacity(.05),
-            offset: const Offset(0, -5),
-          ),
-        ],
       ),
       child: BottomNavigationBar(
+        elevation: 0,
         items: widget.items,
-        onTap: (int index) {},
+        onTap: (int index) {
+          state.changeIndex(index);
+        },
         currentIndex: state.currentIndex,
         backgroundColor: Colors.white,
         selectedLabelStyle: TextStyle(
@@ -37,7 +32,7 @@ class _BottomNavigationWidgetState extends State<BottomNavigationWidget> {
           fontWeight: FontWeight.w400,
           fontSize: 8,
         ),
-        selectedItemColor: const Color.fromRGBO(9, 17, 24, 1),
+        selectedItemColor: Theme.of(context).primaryColor,
         unselectedItemColor: Colors.grey,
         unselectedLabelStyle: const TextStyle(
           color: Color.fromRGBO(9, 17, 24, 1),

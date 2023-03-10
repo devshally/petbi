@@ -36,7 +36,9 @@ class EmailVerificationScreen extends StatelessWidget {
             S.h(446.h),
             MyButton.fill(
               context: context,
-              onPressed: () {},
+              onPressed: () => context.router.replace(
+                const BottomNavigationRoute(),
+              ),
               text: 'Send',
             ),
             TextButton(

@@ -51,7 +51,9 @@ class ResetPasswordScreen extends StatelessWidget {
             S.h(353.h),
             MyButton.fill(
               context: context,
-              onPressed: () {},
+              onPressed: () => context.router.replace(
+                const BottomNavigationRoute(),
+              ),
               text: 'Reset',
             ),
           ],

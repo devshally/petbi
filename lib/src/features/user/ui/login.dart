@@ -61,7 +61,9 @@ class LoginScreen extends StatelessWidget {
               S.h(349.h),
               MyButton.fill(
                 context: context,
-                onPressed: () {},
+                onPressed: () => context.router.replace(
+                  const BottomNavigationRoute(),
+                ),
                 text: 'Log In',
               ),
               S.h(15.h),
