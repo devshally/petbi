@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:petbi/src/core/i18n/l10n.dart';
 import 'package:petbi/src/core/routing/app_router.dart';
 import 'package:petbi/src/core/theme/app_theme.dart';
@@ -11,22 +12,28 @@ class Application extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp.router(
-      title: 'PetBi',
-      routerDelegate: _appRouter.delegate(),
-      routeInformationProvider: _appRouter.routeInfoProvider(),
-      routeInformationParser: _appRouter.defaultRouteParser(),
-      theme: AppTheme.lightTheme,
-      debugShowCheckedModeBanner: false,
-      localizationsDelegates: const [
-        I18n.delegate,
-        GlobalMaterialLocalizations.delegate,
-        GlobalWidgetsLocalizations.delegate,
-        GlobalCupertinoLocalizations.delegate,
-      ],
-      supportedLocales: const [
-        Locale('en', 'US'),
-      ],
+    return ScreenUtilInit(
+      designSize: const Size(428, 926),
+      builder: (context, child) => child!,
+      minTextAdapt: true,
+      splitScreenMode: true,
+      child: MaterialApp.router(
+        title: 'PetBi',
+        routerDelegate: _appRouter.delegate(),
+        routeInformationProvider: _appRouter.routeInfoProvider(),
+        routeInformationParser: _appRouter.defaultRouteParser(),
+        theme: AppTheme.lightTheme,
+        debugShowCheckedModeBanner: false,
+        localizationsDelegates: const [
+          I18n.delegate,
+          GlobalMaterialLocalizations.delegate,
+          GlobalWidgetsLocalizations.delegate,
+          GlobalCupertinoLocalizations.delegate,
+        ],
+        supportedLocales: const [
+          Locale('en', 'US'),
+        ],
+      ),
     );
   }
 }
