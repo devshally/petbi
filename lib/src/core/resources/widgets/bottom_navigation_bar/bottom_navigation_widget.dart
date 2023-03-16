@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:petbi/src/core/resources/resources.dart';
 import 'package:petbi/src/core/resources/widgets/bottom_navigation_bar/state/bottom_navigation_state.dart';
 
 class BottomNavigationWidget extends StatefulWidget {
@@ -30,16 +30,16 @@ class _BottomNavigationWidgetState extends State<BottomNavigationWidget> {
         selectedLabelStyle: TextStyle(
           color: Theme.of(context).primaryColor,
           fontWeight: FontWeight.w400,
-          fontSize: 8,
+          fontSize: 12.sp,
         ),
         selectedItemColor: Theme.of(context).primaryColor,
         unselectedItemColor: Colors.grey,
-        unselectedLabelStyle: const TextStyle(
-          color: Color.fromRGBO(9, 17, 24, 1),
+        unselectedLabelStyle: TextStyle(
+          color: const Color.fromRGBO(9, 17, 24, 1),
           fontWeight: FontWeight.w400,
-          fontSize: 8,
+          fontSize: 12.sp,
         ),
-        iconSize: 30,
+        iconSize: 30.h,
         type: BottomNavigationBarType.fixed,
       ),
     );

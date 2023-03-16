@@ -30,6 +30,12 @@ class AppImages {
   static const locationIcon = 'assets/icons/location.svg';
   static const calendarIcon = 'assets/icons/calendar.svg';
   static const backIcon = 'assets/icons/arrowleft.svg';
+  static const addIcon = 'assets/icons/add_icon.svg';
+  static const addLocationIcon = 'assets/icons/add_location.svg';
+  static const notificationIcon = 'assets/icons/notification.svg';
+  static const settingsIcon = 'assets/icons/settings.svg';
+  static const logoutIcon = 'assets/icons/logout.svg';
+  static const closeIcon = 'assets/icons/close.svg';
 
   // Animal icons.
   static const dogIcon = 'assets/images/dog-face-min.svg';

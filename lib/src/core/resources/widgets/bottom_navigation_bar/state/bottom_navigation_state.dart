@@ -1,4 +1,5 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_zoom_drawer/config.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'bottom_navigation_state.freezed.dart';
@@ -7,6 +8,7 @@ class BottomNavigationCubit extends Cubit<BottomNavigationState> {
   BottomNavigationCubit() : super(const BottomNavigationState());
 
   int currentIndex = 0;
+  final zoomController = ZoomDrawerController();
 
   changeIndex(int index) {
     currentIndex = index;
