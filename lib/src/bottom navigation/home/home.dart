@@ -11,6 +11,8 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final bottomNavigationCubit = context.watch<BottomNavigationCubit>();
+    String url =
+        'https://pngimg.com/uploads/german_shepherd/german_shepherd_PNG48.png';
 
     return Scaffold(
       body: SafeArea(
@@ -73,7 +75,7 @@ class HomeScreen extends StatelessWidget {
                     ),
                     delegate: SliverChildBuilderDelegate(
                       (BuildContext context, int index) {
-                        return const PetCardWidget();
+                        return PetCardWidget(url: url);
                       },
                       childCount: 20,
                     ),
